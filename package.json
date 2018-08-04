@@ -1,0 +1,26 @@
+{
+  "name": "liri",
+  "version": "1.0.0",
+  "description": "simple command line app. user interaction - language interface",
+  "main": "keys.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/unctarheel87/LIRI.git"
+  },
+  "author": "John Tillman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/unctarheel87/LIRI/issues"
+  },
+  "homepage": "https://github.com/unctarheel87/LIRI#readme",
+  "dependencies": {
+    "dotenv": "^6.0.0",
+    "fs": "0.0.1-security",
+    "node-spotify-api": "^1.0.7",
+    "request": "^2.87.0",
+    "twitter": "^1.7.1"
+  }
+}
