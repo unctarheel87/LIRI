@@ -79,9 +79,13 @@ function spotifySearch(query) {
 function findMovie() {
   const apikey = 'trilogy';
     let movie = '';
-    for(let i = 3; i < process.argv.length; i++) {
-      i === 3 ? movie += process.argv[i] : movie += "+" + process.argv[i];
-    }
+    if(arg1) {
+      for(let i = 3; i < process.argv.length; i++) {
+        i === 3 ? movie += process.argv[i] : movie += "+" + process.argv[i];
+      }
+    } else {
+      movie = 'Mr.+Nobody'
+    }  
     const url = 'http://www.omdbapi.com/?apikey=' + apikey + '&t=' + movie;
     request(url, function (error, response, body) {
       if(!error && response.statusCode === 200) {
