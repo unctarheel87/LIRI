@@ -38,7 +38,7 @@ switch (command) {
         i === 3 ? query += process.argv[i] : query += " " + process.argv[i];
       }
     } else {
-      query = "The Sign";
+      query = "The Sign%20artist:Ace of Base";
     }
     spotifySearch(query);
     break;
@@ -64,7 +64,7 @@ switch (command) {
 function spotifySearch(query) {
   spotify.search({ type: 'track', query }, function(error, data) {
     if(!error) {
-      const track = query === 'The Sign' ? data.tracks.items[5] : data.tracks.items[0];
+      const track = data.tracks.items[0];
       customLog('');
       customLog(track.name);
       customLog(track.artists[0].name);
