@@ -58,6 +58,7 @@ switch (command) {
     break;  
 
   default:
+    console.log("Hello I'm LIRI. What can I do for you?");
     break;
 }
 
